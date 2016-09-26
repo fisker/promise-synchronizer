@@ -1,13 +1,13 @@
-# sync-promise
+# promise-synchronizer
 synchronize promise
 
-[![npm](https://img.shields.io/npm/v/sync-promise.svg?style=flat-square)](https://www.npmjs.com/package/sync-promise) 
-[![npm](https://img.shields.io/npm/dt/sync-promise.svg?style=flat-square)](https://www.npmjs.com/package/sync-promise) 
-[![npm](https://img.shields.io/npm/dm/sync-promise.svg?style=flat-square)](https://www.npmjs.com/package/sync-promise)
+[![npm](https://img.shields.io/npm/v/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer) 
+[![npm](https://img.shields.io/npm/dt/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer) 
+[![npm](https://img.shields.io/npm/dm/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer)
 
 ## usage
 
-    $ npm i -g sync-promise
+    $ npm i -g promise-synchronizer
 
 ```
 var promise = new Promise();
@@ -19,6 +19,6 @@ promise
     ...
   });
 
-var syncPromise = require('sync-promise');
-console.log(syncPromise(promise).value);
+var promiseSynchronizer = require('promise-synchronizer');
+console.log(promiseSynchronizer(promise).value);
 ```

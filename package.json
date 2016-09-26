@@ -1,14 +1,16 @@
 {
-  "name": "sync-promise",
+  "name": "promise-synchronizer",
   "version": "0.0.1",
   "description": "synchronize promise",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fisker/sync-promise.git"
+    "url": "https://github.com/fisker/promise-synchronizer.git"
   },
   "keywords": [
-    "sync-promise",
+    "promise-synchronizer",
+    "sync",
+    "synchronizer",
     "synchronize",
     "promise"
   ],
@@ -18,7 +20,7 @@
     "deasync": "^0.1.7"
   },
   "bugs": {
-    "url": "https://github.com/fisker/sync-promise/issues"
+    "url": "https://github.com/fisker/promise-synchronizer/issues"
   },
   "readmeFilename": "README.md"
 }
