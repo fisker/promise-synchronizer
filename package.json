@@ -1,0 +1,25 @@
+{
+  "name": "sync-promise",
+  "version": "0.0.1",
+  "description": "synchronize promise",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fisker/sync-promise.git"
+  },
+  "keywords": [
+    "sync-promise",
+    "synchronize",
+    "promise"
+    "fis3"
+  ],
+  "author": "fisker Cheung <lionkay@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "deasync": "^0.1.7"
+  },
+  "bugs": {
+    "url": "https://github.com/fisker/sync-promise/issues"
+  },
+  "readmeFilename": "README.md"
+}
