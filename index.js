@@ -27,9 +27,9 @@ function wrapPromise(promise) {
 module.exports = function(promise) {
   var wrappedPromise = wrapPromise(promise);
 
-  while(wrappedPromise.state === 'padding') {
-    deasync.sleep(1);
-  }
+  deasync.loopWhile(function(){
+    return wrappedPromise.state !== 'padding';
+  });
 
   return wrappedPromise;
 }
