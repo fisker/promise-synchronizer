@@ -11,7 +11,6 @@
     "sync-promise",
     "synchronize",
     "promise"
-    "fis3"
   ],
   "author": "fisker Cheung <lionkay@gmail.com>",
   "license": "MIT",
