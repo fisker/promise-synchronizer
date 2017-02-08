@@ -14,7 +14,7 @@ function wrapPromise(promise) {
       wrappedPromise.error = reason;
       return reason;
     });
-  wrappedPromise.state = 'padding';
+  wrappedPromise.state = 'pending';
   wrappedPromise.then = function() {
     return wrapPromise(originalThen.apply(this, arguments));
   };
