@@ -20,5 +20,5 @@ promise
   });
 
 var promiseSynchronizer = require('promise-synchronizer');
-console.log(promiseSynchronizer(promise).value);
+console.log(promiseSynchronizer(promise));
 ```
