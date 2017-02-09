@@ -28,7 +28,7 @@ module.exports = function(promise) {
   var wrappedPromise = wrapPromise(promise);
 
   deasync.loopWhile(function(){
-    return wrappedPromise.state === 'padding';
+    return wrappedPromise.state === 'pending';
   });
 
   return wrappedPromise;
