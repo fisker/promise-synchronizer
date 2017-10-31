@@ -1,17 +1,53 @@
-var promiseSynchronizer = require('./');
+import test from 'ava'
+import promiseSynchronizer from './'
 
-var resolvePromise = new Promise(function(resolve) {
-    global.setTimeout(function() {
-      resolve('resolved');
-    }, 1000);
+test('resolved', t => {
+  t.is(promiseSynchronizer(Promise.resolve('resolved')), 'resolved')
+})
+
+test('reject', t => {
+  t.throws(
+    function() {
+      return promiseSynchronizer(Promise.reject(new TypeError('rejected')))
+    },
+    TypeError,
+    'rejected'
+  )
+})
+
+test('rejcet in catch', t => {
+  t.throws(
+    function() {
+      return promiseSynchronizer(
+        Promise.reject(new TypeError('rejected')).catch(function(err) {
+          return Promise.rejcet(err)
+        })
+      )
+    },
+    TypeError,
+    'rejected'
+  )
+})
+
+test('throw in catch', t => {
+  t.throws(
+    function() {
+      return promiseSynchronizer(
+        Promise.reject(new TypeError('rejected')).catch(function(err) {
+          throw err
+        })
+      )
+    },
+    TypeError,
+    'rejected'
+  )
+})
+
+
+test('try catch', t => {
+  t.notThrows(function() {
+    try {
+      var x = promiseSynchronizer(Promise.reject(new TypeError('rejected')))
+    } catch (_) {}
   })
-  .then(function(value) {
-    return value;
-  });
-
-console.log('run');
-
-var sp = promiseSynchronizer(resolvePromise);
-console.log(sp);
-
-console.log('after');
+})

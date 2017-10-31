@@ -1,6 +1,6 @@
 {
   "name": "promise-synchronizer",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "description": "synchronize promise",
   "main": "index.js",
   "repository": {
@@ -17,10 +17,17 @@
   "author": "fisker Cheung <lionkay@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "deasync": "^0.1.7"
+    "deasync": "^0.1.10"
   },
   "bugs": {
     "url": "https://github.com/fisker/promise-synchronizer/issues"
   },
-  "readmeFilename": "README.md"
+  "scripts": {
+    "test": "eslint index.js && ava",
+    "release": "npm --registry=https://registry.npmjs.org/ publish"
+  },
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "ava": "^0.23.0"
+  }
 }
