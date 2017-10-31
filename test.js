@@ -43,11 +43,18 @@ test('throw in catch', t => {
   )
 })
 
-
 test('try catch', t => {
   t.notThrows(function() {
     try {
       var x = promiseSynchronizer(Promise.reject(new TypeError('rejected')))
     } catch (_) {}
   })
+})
+
+test('reject not return', t => {
+  let value = 'orignal'
+  try {
+    value = promiseSynchronizer(Promise.reject(new TypeError('rejected')))
+  } catch (_) {}
+  t.is(value, 'orignal')
 })
