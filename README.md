@@ -7,12 +7,12 @@ synchronize promise
 
 ## install
 ```sh
-    $ npm i promise-synchronizer
+$ npm i promise-synchronizer
 ```
 OR
 
 ```sh
-    $ yarn add promise-synchronizer
+$ yarn add promise-synchronizer
 ```
 
 
