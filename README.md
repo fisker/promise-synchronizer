@@ -18,7 +18,7 @@ $ yarn add promise-synchronizer
 
 ## usage
 ```js
-var sync = require('promise-synchronizer');
+var sync = require('promise-synchronizer')
 
 var result
 
