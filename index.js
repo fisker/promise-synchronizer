@@ -11,31 +11,33 @@ function promiseSynchronizer(promise) {
     return promise
   }
 
-  var promiseResolved = false
-  var promiseRejected = false
-  var promiseValue
-  var promiseReason
+  var isResolved = false
+  var isRejected = false
+  var result
+  var error
 
-  Promise.resolve(promise).then(
+  promise.then(
     function(value) {
-      promiseResolved = true
-      return (promiseValue = value)
+      isResolved = true
+      return (result = value)
     },
     function(reason) {
-      promiseRejected = true
-      return (promiseReason = reason)
+      isRejected = true
+      return (error = reason)
     }
   )
 
   deasync.loopWhile(function() {
-    return !promiseResolved && !promiseRejected
+    return !isResolved && !isRejected
   })
 
-  if (promiseResolved) {
-    return promiseValue
+  if (isRejected) {
+    throw error
   }
 
-  throw promiseReason
+  return result
 }
+
+promiseSynchronizer.sync = promiseSynchronizer
 
 module.exports = promiseSynchronizer

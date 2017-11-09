@@ -1,14 +1,18 @@
 import test from 'ava'
-import promiseSynchronizer from './'
+import sync from './'
 
 test('resolved', t => {
-  t.is(promiseSynchronizer(Promise.resolve('resolved')), 'resolved')
+  t.is(sync(Promise.resolve('resolved')), 'resolved')
+})
+
+test('primitive value as well', t => {
+  t.is(sync('resolved'), 'resolved')
 })
 
 test('reject', t => {
   t.throws(
     function() {
-      return promiseSynchronizer(Promise.reject(new TypeError('rejected')))
+      return sync(Promise.reject(new TypeError('rejected')))
     },
     TypeError,
     'rejected'
@@ -18,7 +22,7 @@ test('reject', t => {
 test('rejcet in catch', t => {
   t.throws(
     function() {
-      return promiseSynchronizer(
+      return sync(
         Promise.reject(new TypeError('rejected')).catch(function(err) {
           return Promise.rejcet(err)
         })
@@ -32,7 +36,7 @@ test('rejcet in catch', t => {
 test('throw in catch', t => {
   t.throws(
     function() {
-      return promiseSynchronizer(
+      return sync(
         Promise.reject(new TypeError('rejected')).catch(function(err) {
           throw err
         })
@@ -46,7 +50,7 @@ test('throw in catch', t => {
 test('try catch', t => {
   t.notThrows(function() {
     try {
-      var x = promiseSynchronizer(Promise.reject(new TypeError('rejected')))
+      var x = sync(Promise.reject(new TypeError('rejected')))
     } catch (_) {}
   })
 })
@@ -54,7 +58,7 @@ test('try catch', t => {
 test('reject not return', t => {
   let value = 'orignal'
   try {
-    value = promiseSynchronizer(Promise.reject(new TypeError('rejected')))
+    value = sync(Promise.reject(new TypeError('rejected')))
   } catch (_) {}
   t.is(value, 'orignal')
 })
