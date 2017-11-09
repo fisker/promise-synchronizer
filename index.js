@@ -6,7 +6,7 @@ function isThenable(obj) {
   )
 }
 
-function promiseSynchronizer(promise) {
+function sync(promise) {
   if (!isThenable(promise)) {
     return promise
   }
@@ -38,6 +38,4 @@ function promiseSynchronizer(promise) {
   return result
 }
 
-promiseSynchronizer.sync = promiseSynchronizer
-
-module.exports = promiseSynchronizer
+module.exports = sync

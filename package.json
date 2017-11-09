@@ -1,6 +1,6 @@
 {
   "name": "promise-synchronizer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "synchronize promise",
   "main": "index.js",
   "repository": {
@@ -14,7 +14,11 @@
     "synchronize",
     "promise"
   ],
-  "author": "fisker Cheung <lionkay@gmail.com>",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://github.com/fisker"
+  },
   "license": "MIT",
   "dependencies": {
     "deasync": "^0.1.10"
@@ -29,5 +33,11 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "ava": "^0.23.0"
-  }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "package.json"
+  ]
 }
