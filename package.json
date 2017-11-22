@@ -1,6 +1,6 @@
 {
   "name": "promise-synchronizer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "synchronize promise",
   "main": "index.js",
   "repository": {
@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "deasync": "^0.1.10"
+    "deasync": "^0.1.11"
   },
   "bugs": {
     "url": "https://github.com/fisker/promise-synchronizer/issues"
