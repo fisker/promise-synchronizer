@@ -1,6 +1,6 @@
 {
   "name": "promise-synchronizer",
-  "version": "1.0.7",
+  "version": "1.0.6",
   "description": "synchronize promise",
   "main": "index.js",
   "repository": {
@@ -29,11 +29,15 @@
   "scripts": {
     "test": "eslint index.js && ava",
     "update-dependencies": "yarn upgrade-interactive --latest",
-    "publish-npm": "npm --registry=https://registry.npmjs.org/ publish"
+    "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
+    "release": "release-it"
   },
   "readmeFilename": "README.md",
   "devDependencies": {
-    "ava": "^0.24.0"
+    "ava": "^0.24.0",
+    "eslint": "^4.14.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "prettier": "^1.9.2"
   },
   "files": [
     "LICENSE",
