@@ -30,7 +30,7 @@
     "test": "eslint index.js && ava",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
-    "release": "release-it"
+    "release": "release-it && npm run publish-npm"
   },
   "readmeFilename": "README.md",
   "devDependencies": {

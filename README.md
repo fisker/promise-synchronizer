@@ -1,5 +1,4 @@
-# promise-synchronizer
-[![Travis](https://img.shields.io/travis/fisker/promise-synchronizer.svg?style=flat-square)](https://travis-ci.org/fisker/promise-synchronizer)
+# promise-synchronizer [![Travis](https://img.shields.io/travis/fisker/promise-synchronizer.svg?style=flat-square)](https://travis-ci.org/fisker/promise-synchronizer)
 
 synchronize promise
 
