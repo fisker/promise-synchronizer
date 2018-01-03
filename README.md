@@ -1,6 +1,7 @@
 # promise-synchronizer
 synchronize promise
 
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![npm](https://img.shields.io/npm/v/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer)
 [![npm](https://img.shields.io/npm/dt/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer)
 [![npm](https://img.shields.io/npm/dm/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer)
@@ -20,11 +21,11 @@ $ yarn add promise-synchronizer
 ```js
 var sync = require('promise-synchronizer')
 
-var result
-
 try {
-  result = sync(promise)
+  var result = sync(promise)
 } catch (err) {
   console.error(err)
 }
 ```
+## license
+MIT © [fisker Cheung](https://github.com/fisker)
