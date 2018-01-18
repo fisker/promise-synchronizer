@@ -35,9 +35,9 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "ava": "^0.24.0",
-    "eslint": "^4.14.0",
-    "eslint-plugin-prettier": "^2.4.0",
-    "prettier": "^1.9.2"
+    "eslint": "^4.15.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "prettier": "^1.10.2"
   },
   "files": [
     "LICENSE",
