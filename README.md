@@ -20,7 +20,17 @@ $ yarn add promise-synchronizer
 
 ## usage
 ```js
-var sync = require('promise-synchronizer')
+var promisesync = require('promise-synchronizer')
+
+try {
+  var result = promisesync.sync(promise)
+} catch (err) {
+  console.error(err)
+}
+```
+Or if you prefer to destructure
+```js
+var { sync } = require('promise-synchronizer')
 
 try {
   var result = sync(promise)
