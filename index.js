@@ -38,4 +38,4 @@ function sync(promise) {
   return result
 }
 
-module.exports = sync
+module.exports = { sync }
