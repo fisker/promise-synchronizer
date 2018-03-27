@@ -20,13 +20,19 @@ $ yarn add promise-synchronizer
 
 ## usage
 ```js
-var sync = require('promise-synchronizer')
+const sync = require('promise-synchronizer')
+
+const resolved = Promise.resolve('SUCCESS')
+const rejected = Promise.reject(new Error('FAILURE'))
+
+let success = sync(resolved) // SUCCESS
 
 try {
-  var result = sync(promise)
+  let result = sync(rejected)
 } catch (err) {
-  console.error(err)
+  console.error(err) // FAILURE
 }
+
 ```
 ## license
 MIT © [fisker Cheung](https://github.com/fisker)

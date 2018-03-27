@@ -1,4 +1,4 @@
-var deasync = require('deasync')
+var deasyncLoopWhile = require('deasync').loopWhile
 
 function isThenable(obj) {
   return (
@@ -11,27 +11,27 @@ function sync(promise) {
     return promise
   }
 
-  var isResolved = false
-  var isRejected = false
+  var resolved = false
+  var rejected = false
   var result
   var error
 
   promise.then(
     function(value) {
-      isResolved = true
+      resolved = true
       return (result = value)
     },
     function(reason) {
-      isRejected = true
+      rejected = true
       return (error = reason)
     }
   )
 
-  deasync.loopWhile(function() {
-    return !isResolved && !isRejected
+  deasyncLoopWhile(function() {
+    return !resolved && !rejected
   })
 
-  if (isRejected) {
+  if (rejected) {
     throw error
   }
 
