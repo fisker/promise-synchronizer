@@ -32,7 +32,7 @@ function sync(promise) {
   })
 
   if (rejected) {
-    throw error
+    throw error;
   }
   return result
 }
