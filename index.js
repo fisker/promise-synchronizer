@@ -28,13 +28,12 @@ function sync(promise) {
   )
 
   deasyncLoopWhile(function() {
-    return !resolved && !rejected
+    return !resolved && !rejected;
   })
 
   if (rejected) {
     throw error
   }
-
   return result
 }
 

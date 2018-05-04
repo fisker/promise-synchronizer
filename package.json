@@ -27,10 +27,13 @@
     "url": "https://github.com/fisker/promise-synchronizer/issues"
   },
   "scripts": {
+    "precommit": "pretty-quick --staged",
     "test": "eslint index.js && ava",
     "update-dependencies": "yarn upgrade-interactive --latest",
-    "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
-    "release": "release-it && npm run publish-npm"
+    "release": "np --no-yarn --no-cleanup"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "readmeFilename": "README.md",
   "devDependencies": {
