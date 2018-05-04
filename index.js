@@ -23,7 +23,7 @@ function sync(promise) {
     },
     function(reason) {
       rejected = true
-      return (error = reason)
+      return (error = reason);
     }
   )
 

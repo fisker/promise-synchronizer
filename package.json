@@ -40,7 +40,8 @@
     "ava": "^0.25.0",
     "eslint": "^4.19.1",
     "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1"
   },
   "files": [
     "LICENSE",
