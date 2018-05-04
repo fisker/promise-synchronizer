@@ -23,12 +23,12 @@ function sync(promise) {
     },
     function(reason) {
       rejected = true
-      return (error = reason);
+      return (error = reason)
     }
   )
 
   deasyncLoopWhile(function() {
-    return !resolved && !rejected;
+    return !resolved && !rejected
   })
 
   if (rejected) {
@@ -37,4 +37,4 @@ function sync(promise) {
   return result
 }
 
-module.exports = sync
+module.exports = sync;

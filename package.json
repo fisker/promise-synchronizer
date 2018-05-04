@@ -27,7 +27,7 @@
     "url": "https://github.com/fisker/promise-synchronizer/issues"
   },
   "scripts": {
-    "precommit": "pretty-quick --staged",
+    "precommit": "pretty-quick",
     "test": "eslint index.js && ava",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "release": "np --no-yarn --no-cleanup"
@@ -43,10 +43,5 @@
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1"
   },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "index.js",
-    "package.json"
-  ]
+  "files": ["LICENSE", "README.md", "index.js", "package.json"]
 }
