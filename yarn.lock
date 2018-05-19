@@ -990,9 +990,9 @@ date-time@^2.1.0:
   dependencies:
     time-zone "^1.0.0"
 
-deasync@^0.1.12:
-  version "0.1.12"
-  resolved "http://registry.npm.taobao.org/deasync/download/deasync-0.1.12.tgz#0159492a4133ab301d6c778cf01e74e63b10e549"
+deasync@^0.1.13:
+  version "0.1.13"
+  resolved "http://registry.npm.taobao.org/deasync/download/deasync-0.1.13.tgz#815c2b69bbd1117cae570152cd895661c09f20ea"
   dependencies:
     bindings "~1.2.1"
     nan "^2.0.7"

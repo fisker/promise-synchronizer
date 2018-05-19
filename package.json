@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "deasync": "^0.1.12"
+    "deasync": "^0.1.13"
   },
   "bugs": {
     "url": "https://github.com/fisker/promise-synchronizer/issues"
