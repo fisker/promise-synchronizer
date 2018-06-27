@@ -8,31 +8,39 @@ synchronize promise
 [![npm](https://img.shields.io/npm/dm/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer)
 
 ## install
-```sh
+
+```bash
 $ npm i promise-synchronizer
 ```
+
 OR
 
-```sh
+```bash
 $ yarn add promise-synchronizer
 ```
 
-
 ## usage
+
 ```js
 const sync = require('promise-synchronizer')
 
-const resolved = Promise.resolve('SUCCESS')
-const rejected = Promise.reject(new Error('FAILURE'))
+const promise = new Promise((resolve, reject) => {
+  if (Math.random() > 0.5) {
+    resolve('SUCCESS')
+  } else {
+    reject(new Error('FAILURE'))
+  }
+})
 
-let success = sync(resolved) // SUCCESS
+let result
 
 try {
-  let result = sync(rejected)
+  result = sync(promise) // SUCCESS
 } catch (err) {
   console.error(err) // FAILURE
 }
-
 ```
+
 ## license
+
 MIT © [fisker Cheung](https://github.com/fisker)
