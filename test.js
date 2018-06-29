@@ -12,37 +12,25 @@ test('primitive value as well', t => {
 })
 
 test('reject', t => {
-  t.throws(
-    function() {
-      return sync(Promise.reject(rejectError))
-    },
-    TypeError,
-    'rejected'
-  )
+  t.throws(function() {
+    return sync(Promise.reject(rejectError))
+  }, TypeError)
 })
 
 test('reject in catch', t => {
-  t.throws(
-    function() {
-      return sync(Promise.reject(rejectError).catch(err => Promise.reject(err)))
-    },
-    TypeError,
-    'rejected'
-  )
+  t.throws(function() {
+    return sync(Promise.reject(rejectError).catch(err => Promise.reject(err)))
+  }, TypeError)
 })
 
 test('throw in catch', t => {
-  t.throws(
-    function() {
-      return sync(
-        Promise.reject(rejectError).catch(function(err) {
-          throw err
-        })
-      )
-    },
-    TypeError,
-    'rejected'
-  )
+  t.throws(function() {
+    return sync(
+      Promise.reject(rejectError).catch(function(err) {
+        throw err
+      })
+    )
+  }, TypeError)
 })
 
 test('try catch', t => {
