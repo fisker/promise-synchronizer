@@ -21,14 +21,10 @@ test('reject', t => {
   )
 })
 
-test('rejcet in catch', t => {
+test('reject in catch', t => {
   t.throws(
     function() {
-      return sync(
-        Promise.reject(rejectError).catch(function(err) {
-          return Promise.rejcet(err)
-        })
-      )
+      return sync(Promise.reject(rejectError).catch(err => Promise.reject(err)))
     },
     TypeError,
     'rejected'
