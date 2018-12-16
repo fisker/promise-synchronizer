@@ -37,7 +37,7 @@
   },
   "readmeFilename": "README.md",
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^1.0.1",
     "eslint": "^5.0.1",
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.1.2",
