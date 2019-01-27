@@ -1,6 +1,6 @@
 {
   "name": "promise-synchronizer",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "synchronize promise",
   "main": "index.js",
   "repository": {
