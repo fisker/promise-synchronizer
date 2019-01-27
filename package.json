@@ -30,7 +30,7 @@
     "precommit": "pretty-quick --staged",
     "test": "eslint index.js && ava",
     "update-dependencies": "yarn upgrade-interactive --latest",
-    "release": "np --no-yarn --yolo"
+    "release": "np --no-yarn --yolo --no-cleanup"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
