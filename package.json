@@ -28,7 +28,8 @@
   },
   "scripts": {
     "precommit": "pretty-quick --staged",
-    "test": "eslint index.js && ava",
+    "lint": "eslint index.js && ",
+    "test": "ava",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "release": "np --no-yarn --yolo --no-cleanup",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
