@@ -52,7 +52,7 @@
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0"
   },
-  "files": ["LICENSE", "README.md", "index.js", "package.json"],
+  "files": ["index.js"],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-emoji"
