@@ -5,8 +5,6 @@
  * document: https://eslint.org/docs/user-guide/configuring
  */
 
-/* eslint-disable no-unused-vars */
-
 /* @xwtec/eslint-config https://git.io/fhNpT */
 const xwtec = (pkg => ({
   default: pkg,
