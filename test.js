@@ -1,5 +1,5 @@
 import test from 'ava'
-import sync from './'
+import sync from '.'
 
 const rejectError = new TypeError('rejected')
 
@@ -36,8 +36,8 @@ test('throw in catch', t => {
 test('try catch', t => {
   t.notThrows(function() {
     try {
-      var x = sync(Promise.reject(rejectError))
-    } catch (_) {}
+      sync(Promise.reject(rejectError))
+    } catch {}
   })
 })
 
@@ -45,12 +45,12 @@ test('reject not return', t => {
   let value = 'orignal'
   try {
     value = sync(Promise.reject(rejectError))
-  } catch (_) {}
+  } catch {}
   t.is(value, 'orignal')
 })
 
 test('reject already catched', t => {
   t.notThrows(function() {
-    return sync(Promise.reject(rejectError).catch(function(err) {}))
+    return sync(Promise.reject(rejectError).catch(() => {}))
   })
 })
