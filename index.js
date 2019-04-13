@@ -1,8 +1,10 @@
 const deasyncLoopWhile = require('deasync').loopWhile
 
-function isThenable(obj) {
+function isThenable(object) {
   return (
-    obj !== null && typeof obj === 'object' && typeof obj.then === 'function'
+    object !== null &&
+    typeof object === 'object' &&
+    typeof object.then === 'function'
   )
 }
 

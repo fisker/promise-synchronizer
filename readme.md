@@ -23,13 +23,13 @@ yarn add promise-synchronizer
 ## usage
 
 ```js
-const sync = require("promise-synchronizer")
+const sync = require('promise-synchronizer')
 
 const promise = new Promise((resolve, reject) => {
   if (Math.random() > 0.5) {
-    resolve("SUCCESS")
+    resolve('SUCCESS')
   } else {
-    reject(new Error("FAILURE"))
+    reject(new Error('FAILURE'))
   }
 })
 
