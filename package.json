@@ -52,7 +52,7 @@
     "lint-staged": "^8.1.5",
     "markdownlint-cli": "^0.15.0",
     "prettier": "^1.17.0",
-    "prettier-config-fisker": "^1.0.0"
+    "prettier-config-fisker": "^1.0.3"
   },
   "files": ["index.js"],
   "config": {
