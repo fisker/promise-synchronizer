@@ -12,5 +12,4 @@ script:
   - nyc yarn test-coverage
 after_script:
   - npm install --global coveralls
-  - yarn coverage
   - nyc report --reporter=text-lcov | coveralls
