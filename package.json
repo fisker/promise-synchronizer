@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/fisker/promise-synchronizer/issues"
   },
-  "version": "1.0.15",
+  "version": "1.0.16",
   "main": "lib/index.common.js",
   "module": "lib/index.mjs",
   "files": [
