@@ -9,7 +9,7 @@ before_install:
 script:
   - yarn lint
   - yarn build
-  - nyc yarn test
+  - nyc yarn test-coverage
 after_script:
   - npm install --global coveralls
   - yarn coverage
