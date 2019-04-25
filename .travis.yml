@@ -13,4 +13,4 @@ script:
 after_script:
   - npm install --global coveralls
   - yarn coverage
-  - cat ./coverage/lcov.info | coveralls
+  - nyc report --reporter=text-lcov > coverage.lcov && coveralls
