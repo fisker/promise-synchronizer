@@ -1,8 +1,8 @@
 import {loopWhile} from 'deasync'
-import isThenable from 'p-is-promise'
+import isPromise from 'p-is-promise'
 
 function sync(promise) {
-  if (!isThenable(promise)) {
+  if (!isPromise(promise)) {
     return promise
   }
 

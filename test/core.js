@@ -1,5 +1,5 @@
 import test from 'ava'
-import sync from './src'
+import sync from '../src'
 
 const rejectError = new TypeError('rejected')
 
@@ -12,31 +12,31 @@ test('primitive value as well', t => {
 })
 
 test('reject', t => {
-  t.throws(function() {
-    return sync(Promise.reject(rejectError))
-  }, TypeError)
+  t.throws(() => sync(Promise.reject(rejectError)), TypeError)
 })
 
 test('reject in catch', t => {
-  t.throws(function() {
-    return sync(
-      Promise.reject(rejectError).catch(error => Promise.reject(error))
-    )
-  }, TypeError)
+  t.throws(
+    () =>
+      sync(Promise.reject(rejectError).catch(error => Promise.reject(error))),
+    TypeError
+  )
 })
 
 test('throw in catch', t => {
-  t.throws(function() {
-    return sync(
-      Promise.reject(rejectError).catch(function(error) {
-        throw error
-      })
-    )
-  }, TypeError)
+  t.throws(
+    () =>
+      sync(
+        Promise.reject(rejectError).catch(error => {
+          throw error
+        })
+      ),
+    TypeError
+  )
 })
 
 test('try catch', t => {
-  t.notThrows(function() {
+  t.notThrows(() => {
     try {
       sync(Promise.reject(rejectError))
     } catch {}
@@ -52,7 +52,5 @@ test('reject not return', t => {
 })
 
 test('reject already catched', t => {
-  t.notThrows(function() {
-    return sync(Promise.reject(rejectError).catch(() => {}))
-  })
+  t.notThrows(() => sync(Promise.reject(rejectError).catch(() => {})))
 })

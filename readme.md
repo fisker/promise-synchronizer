@@ -12,13 +12,13 @@
 
 > synchronize promise
 
-## install
+## Install
 
 ```bash
 yarn add promise-synchronizer
 ```
 
-## usage
+## Usage
 
 ```js
 import sync from 'promise-synchronizer'
@@ -40,6 +40,6 @@ try {
 }
 ```
 
-## license
+License
 
 MIT © [fisker Cheung](https://github.com/fisker)
