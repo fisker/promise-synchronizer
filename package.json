@@ -19,14 +19,14 @@
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
     "release": "run-s clean lint build prettier test dist",
-    "test": "ava",
+    "test": "ava --verbose",
+    "test-coverage": "nyc ava",
     "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
   "config": {

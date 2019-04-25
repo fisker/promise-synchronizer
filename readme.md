@@ -6,7 +6,7 @@
 [![npm](https://img.shields.io/npm/dm/promise-synchronizer.svg?style=flat-square)](https://www.npmjs.com/package/promise-synchronizer)
 
 [![Build Status](https://img.shields.io/travis/fisker/promise-synchronizer.svg?style=flat-square)](https://travis-ci.org/fisker/promise-synchronizer)
-[![Code Coverage](https://img.shields.io/coveralls/github/fisker/promise-synchronizer.svg?style=flat-square)](https://codecov.io/github/fisker/promise-synchronizer)
+[![Code Coverage](https://img.shields.io/coveralls/github/fisker/promise-synchronizer.svg?style=flat-square)](https://coveralls.io/github/fisker/promise-synchronizer)
 [![MIT License](https://img.shields.io/npm/l/promise-synchronizer.svg?style=flat-square)](https://github.com/fisker/promise-synchronizer/blob/master/license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
