@@ -1,5 +1,5 @@
 import test from 'ava'
-import sync from '.'
+import sync from './src'
 
 const rejectError = new TypeError('rejected')
 
