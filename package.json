@@ -1,63 +1,70 @@
 {
   "name": "promise-synchronizer",
-  "version": "1.0.15",
   "description": "synchronize promise",
-  "main": "index.js",
+  "license": "MIT",
+  "author": "fisker Cheung <lionkay@gmail.com> (https://www.fiskercheung.com/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/fisker/promise-synchronizer.git"
   },
-  "keywords": [
-    "promise-synchronizer",
-    "sync",
-    "synchronizer",
-    "synchronize",
-    "promise"
-  ],
-  "author": {
-    "name": "fisker Cheung",
-    "email": "lionkay@gmail.com",
-    "url": "https://www.fiskercheung.com/"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "deasync": "^0.1.14"
-  },
   "bugs": {
     "url": "https://github.com/fisker/promise-synchronizer/issues"
   },
+  "version": "1.0.15",
+  "main": "lib/index.common.js",
+  "module": "lib/index.mjs",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "test": "ava",
-    "release": "run-s lint test prettier dist",
+    "build": "run-p build:*",
+    "build:js": "rollup --config",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
-    "lint:markdown": "markdownlint **/*.md --ignore \"node_modules/**\"",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
-    "prettier": "prettier **/*.{css,scss,html,js,json,md,less,vue,yaml,ts} --write"
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
+    "release": "run-s clean lint build prettier test dist",
+    "test": "ava",
+    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "readmeFilename": "README.md",
-  "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "ava": "^1.4.1",
-    "cz-conventional-changelog-emoji": "^0.1.0",
-    "eslint": "^5.16.0",
-    "eslint-config-fisker": "^4.5.0",
-    "husky": "^2.1.0",
-    "lint-staged": "^8.1.5",
-    "markdownlint-cli": "^0.15.0",
-    "prettier": "^1.17.0",
-    "prettier-config-fisker": "^1.0.3"
-  },
-  "files": ["index.js"],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-emoji"
     }
+  },
+  "dependencies": {
+    "deasync": "^0.1.14",
+    "p-is-promise": "^2.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@fisker/commitlint-config": "^1.0.2",
+    "@fisker/eslint-config": "^1.0.7",
+    "@fisker/lint-staged-config": "^1.0.1",
+    "@fisker/prettier-config": "^1.0.11",
+    "ava": "^1.4.1",
+    "cz-conventional-changelog-emoji": "^0.1.0",
+    "eslint": "^5.16.0",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "markdownlint-cli": "^0.15.0",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.10.1",
+    "rollup-plugin-filesize": "^6.0.1",
+    "rollup-plugin-prettier": "^0.6.0"
+  },
+  "keywords": [
+    "promise",
+    "promise-synchronizer",
+    "sync",
+    "synchronize",
+    "synchronizer"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
