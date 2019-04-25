@@ -19,6 +19,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
+    "clean": "rimraf lib",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "lint": "run-p lint:*",
