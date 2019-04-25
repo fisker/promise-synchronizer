@@ -9,7 +9,7 @@ before_install:
 script:
   - yarn lint
   - yarn build
-  - nyc yarn test-coverage
+  - yarn test-coverage
 after_script:
   - npm install --global coveralls
   - nyc report --reporter=text-lcov | coveralls
