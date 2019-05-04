@@ -36,7 +36,7 @@
     }
   },
   "dependencies": {
-    "deasync": "^0.1.14",
+    "deasync": "^0.1.15",
     "p-is-promise": "^2.1.0"
   },
   "devDependencies": {
