@@ -40,6 +40,6 @@ try {
 }
 ```
 
-License
+## License
 
 MIT © [fisker Cheung](https://github.com/fisker)
