@@ -497,10 +497,10 @@
   resolved "https://registry.npm.taobao.org/@fisker/lint-staged-config/download/@fisker/lint-staged-config-1.0.4.tgz#08206dd7ce02fccce83939fcf21ba2b774b5be36"
   integrity sha1-CCBt184C/MzoOTn88huit3S1vjY=
 
-"@fisker/prettier-config@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@fisker/prettier-config/-/prettier-config-1.0.14.tgz#de7e403a065a4495d4c3aea1e7c3e54bbac6a600"
-  integrity sha512-xk3F0QG6krI0rObJIi7W+wlL2JlFmn+/OMfPCh2ifGsi4e2xew8CwYC7fCD3K8l40bixSyfr4dXWwovFp5fxAg==
+"@fisker/prettier-config@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@fisker/prettier-config/-/prettier-config-1.0.15.tgz#536d7d16eeaec518eb2497d20cf36740f7b30abb"
+  integrity sha512-p6owmof3vHspftVlIU9YSQmsJszNLoui0lrQCPNgQbh3QhZSgZ5hkdkjQg5oLx+oBfmtFG3yFssU6vUx21kBQA==
 
 "@marionebl/sander@^0.6.0":
   version "0.6.1"
