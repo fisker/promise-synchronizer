@@ -2066,9 +2066,9 @@ eslint-plugin-promise@^4.1.1:
   integrity sha512-faAHw7uzlNPy7b45J1guyjazw28M+7gJokKUjC5JSFoYfUEyy6Gw/i7YQvmv2Yk00sUjWcmzXQLpU1Ki/C2IZQ==
 
 eslint-plugin-unicorn@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-unicorn/-/eslint-plugin-unicorn-9.0.0.tgz#53e0a9043ad27f11f10846603915251d03584165"
-  integrity sha512-D0NbpmL6paSpwVrwdc/eePpp2KyPU9R+rEXKN+EjE8YqhELwF8wvixcpY5BenztzT2KZQiWWWyHfZmM9bTyRpA==
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-9.1.0.tgz#b5ec3c65ae28d8163f6f6b340b183e11862ec295"
+  integrity sha512-OknjtY1daSxHd60KsXBxP9d2LExA3JZ2XuPOtqSZbLjwGaKjZXYMCaPI2xg70Qc791rXoi0pW4UEzVCnwlRi+Q==
   dependencies:
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.0.0"
@@ -2079,6 +2079,7 @@ eslint-plugin-unicorn@^9.0.0:
     lodash.snakecase "^4.0.1"
     lodash.topairs "^4.3.0"
     lodash.upperfirst "^4.2.0"
+    regexpp "^2.0.1"
     reserved-words "^0.1.2"
     safe-regex "^2.0.1"
 
@@ -4835,9 +4836,9 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     safe-regex "^1.1.0"
 
 regexp-tree@~0.1.1:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/regexp-tree/-/regexp-tree-0.1.5.tgz#7cd71fca17198d04b4176efd79713f2998009397"
-  integrity sha512-nUmxvfJyAODw+0B13hj8CFVAxhe7fDEAgJgaotBu3nnR+IgGgZq59YedJP5VYTlkEfqjuK6TuRpnymKdatLZfQ==
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/regexp-tree/-/regexp-tree-0.1.10.tgz#d837816a039c7af8a8d64d7a7c3cf6a1d93450bc"
+  integrity sha512-K1qVSbcedffwuIslMwpe6vGlj+ZXRnGkvjAtFHfDZZZuEdA/h0dxljAPu9vhUo6Rrx2U2AwJ+nSQ6hK+lrP5MQ==
 
 regexpp@^2.0.1:
   version "2.0.1"
