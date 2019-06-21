@@ -2,7 +2,11 @@
   "name": "promise-synchronizer",
   "description": "synchronize promise",
   "license": "MIT",
-  "author": "fisker Cheung <lionkay@gmail.com> (https://www.fiskercheung.com/)",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://www.fiskercheung.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/fisker/promise-synchronizer.git"
@@ -22,13 +26,15 @@
     "clean": "rimraf lib",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
-    "release": "run-s clean lint build prettier test dist",
+    "release": "run-s clean lint build format test dist",
     "test": "ava --verbose",
-    "test-coverage": "nyc yarn test",
-    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "test-coverage": "nyc yarn test"
   },
   "config": {
     "commitizen": {
@@ -44,6 +50,7 @@
     "@fisker/commitlint-config": "^1.0.9",
     "@fisker/eslint-config": "^1.1.2",
     "@fisker/eslint-config-ava": "^1.1.1",
+    "@fisker/husky-config": "^1.1.0",
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/prettier-config": "^1.0.17",
     "ava": "^2.1.0",
@@ -77,5 +84,6 @@
   },
   "nyc": {
     "require": "esm"
-  }
+  },
+  "sideEffects": false
 }
