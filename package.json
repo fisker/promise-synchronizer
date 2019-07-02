@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "deasync": "^0.1.15",
-    "p-is-promise": "^2.1.0"
+    "p-is-promise": "^3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
