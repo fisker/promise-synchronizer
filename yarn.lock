@@ -475,10 +475,10 @@
   dependencies:
     eslint-plugin-ava "7.1.0"
 
-"@fisker/eslint-config@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.2.5.tgz#54a6c7f5be37e2ab147a4d1bcf9c52a98daa1614"
-  integrity sha512-mi2Ix+tmO0LWPUbiJO9gOJvo0AjitAQOrKlbnIuQjKW4PoW/7msiuki3P8yCZcJ62Ks+Kxx+N04NsTB5tTfBAA==
+"@fisker/eslint-config@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.2.6.tgz#f5be3dd529c6a5c3ceff8265f4d8c978fc7a90bb"
+  integrity sha512-wcBWEs/v12jyrBJuZtWiMhTL9s01g8ykhcl/LEkchNMVnmZdEniB3Wco2MokrSJDNr65uOQIAdZa0ZyUukctdw==
   dependencies:
     eslint-config-airbnb-base "13.2.0"
     eslint-config-prettier "6.0.0"
