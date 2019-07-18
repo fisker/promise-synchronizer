@@ -16,12 +16,12 @@ export default {
   input: `src/index.js`,
   output: [
     {
-      file: `lib/index.common.js`,
+      file: 'lib/index.common.js',
       format: 'cjs',
       sourcemap: true,
     },
     {
-      file: `lib/index.mjs`,
+      file: 'lib/index.mjs',
       format: 'esm',
       sourcemap: true,
     },
