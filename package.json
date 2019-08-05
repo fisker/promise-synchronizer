@@ -32,7 +32,7 @@
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build format test dist",
     "test": "ava",
-    "test-coverage": "cross-env ESM_DISABLE_CACHE=1 nyc --reporter=lcov --reporter=text ava"
+    "test-coverage": "nyc --reporter=lcov --reporter=text ava"
   },
   "config": {
     "commitizen": {
@@ -52,7 +52,6 @@
     "@fisker/lint-staged-config": "1.0.5",
     "@fisker/prettier-config": "1.0.18",
     "ava": "2.2.0",
-    "cross-env": "5.2.0",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "6.1.0",
     "esm": "3.2.25",
