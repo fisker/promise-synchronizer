@@ -15,4 +15,4 @@ script:
   - yarn test-coverage
 after_script:
   - npm install --global coveralls
-  - cat ./coverage/lcov.info | coveralls
+  - nyc report --reporter=text-lcov | coveralls
