@@ -80,7 +80,6 @@
     "require": "esm"
   },
   "nyc": {
-    "all": true,
     "require": "esm"
   },
   "sideEffects": false
