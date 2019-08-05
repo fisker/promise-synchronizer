@@ -32,7 +32,7 @@
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build format test dist",
     "test": "ava",
-    "test-coverage": "cross-env ESM_DISABLE_CACHE=1 nyc ava"
+    "test-coverage": "cross-env ESM_DISABLE_CACHE=1 nyc --reporter=lcov --reporter=text ava"
   },
   "config": {
     "commitizen": {
