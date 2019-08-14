@@ -1,8 +1,8 @@
-name: Lint
+name: Test
 on: [push, pull_request]
 jobs:
-  main:
-    name: Lint
+  test:
+    name: Test on node ${{ matrix.node_version }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -11,13 +11,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           version: ${{ matrix.node-version }}
+
       - name: Install
-        run: yarn
-      - name: Run lint
+        run: |
+          npm install --global nyc
+          yarn
+
+      - name: Run lint, build and test-coverage
         run: |
           yarn lint
           yarn build
