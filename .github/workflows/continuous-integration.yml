@@ -16,7 +16,8 @@ jobs:
           - 12.x
 
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
         with:
           fetch-depth: 1
 
@@ -36,7 +37,7 @@ jobs:
           yarn build
           yarn test-coverage
 
-      - name: Upload coverage
+      - name: Upload Coverage
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.github_token }}
