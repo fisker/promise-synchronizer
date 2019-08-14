@@ -8,4 +8,7 @@ jobs:
       - name: Install
         run: yarn
       - name: Run lint
-        shell: yarn lint
+        run: |
+          yarn lint
+          yarn build
+          yarn test-coverage
