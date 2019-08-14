@@ -1,16 +1,24 @@
 name: Test
-on: [push, pull_request]
+
+on:
+  - push
+  - pull_request
+
 jobs:
   test:
-    name: Test on node ${{ matrix.node_version }}
+    name: Test on node ${{ matrix.node-version }}
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version:
+          - 10.x
+          - 12.x
 
     steps:
       - uses: actions/checkout@master
+        with:
+          fetch-depth: 1
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -27,3 +35,8 @@ jobs:
           yarn lint
           yarn build
           yarn test-coverage
+
+      - name: Upload coverage
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.github_token }}
