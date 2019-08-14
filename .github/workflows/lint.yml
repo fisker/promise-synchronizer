@@ -8,4 +8,4 @@ jobs:
       - name: Install
         run: yarn
       - name: Run lint
-        run: yarn lint
+        shell: yarn lint
