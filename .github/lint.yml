@@ -1,0 +1,11 @@
+name: Lint
+on: [push, pull_request]
+jobs:
+  main:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install
+        run: yarn
+      - name: Run lint
+        run: yarn lint
