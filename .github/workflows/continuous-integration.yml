@@ -1,19 +1,48 @@
-name: Test
+name: CI
 
 on:
   - push
   - pull_request
 
 jobs:
+  lint:
+    strategy:
+      fail-fast: false
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Run Lint
+        run: yarn lint
+
   test:
     strategy:
+      fail-fast: false
       matrix:
-        NODE:
-          - 10.x
-          - 12.x
         PLATFORM:
           - ubuntu-latest
-      fail-fast: false
+          # - macos-latest
+          # - windows-latest
+        NODE:
+          - 12.x
+          - 10.x
+        # exclude:
+        #   - PLATFORM: macos-latest
+        #     NODE: 12.x
+        #   - PLATFORM: windows-latest
+        #     NODE: 12.x
 
     name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
 
@@ -25,23 +54,21 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@master
         with:
-          version: ${{ matrix.NODE }}
+          node-version: ${{ matrix.NODE }}
 
-      - name: Install
-        run: |
-          npm install --global nyc
-          yarn
+      - name: Install nyc
+        run: npm install --global nyc
 
-      - name: Lint
-        run: yarn lint
+      - name: Install Dependencies
+        run: yarn
 
-      - name: Build
+      - name: Build Package
         run: yarn build
 
-      - name: Test
+      - name: Run Test
         run: yarn test-coverage
 
       - name: Upload Coverage
