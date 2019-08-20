@@ -1,8 +1,10 @@
 name: CI
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   lint:
@@ -58,9 +60,6 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.NODE }}
-
-      - name: Install nyc
-        run: npm install --global nyc
 
       - name: Install Dependencies
         run: yarn
