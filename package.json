@@ -44,7 +44,7 @@
     "p-is-promise": "3.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.1.0",
+    "@commitlint/cli": "8.2.0",
     "@fisker/commitlint-config": "1.1.2",
     "@fisker/eslint-config": "1.2.19",
     "@fisker/eslint-config-ava": "1.2.3",
