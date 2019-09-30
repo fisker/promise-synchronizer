@@ -40,7 +40,7 @@ jobs:
           # - macos-latest
           # - windows-latest
         NODE:
-          - 12.x
+          - 12.10
           - 10.x
         # exclude:
         #   - PLATFORM: macos-latest
