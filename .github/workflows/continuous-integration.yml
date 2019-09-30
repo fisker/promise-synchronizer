@@ -40,7 +40,8 @@ jobs:
           # - macos-latest
           # - windows-latest
         NODE:
-          - 12.x
+          # TODO: set this to 12.x when node>12.11 is published
+          - "12.10"
           - 10.x
         # exclude:
         #   - PLATFORM: macos-latest
