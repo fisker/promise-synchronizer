@@ -14,12 +14,12 @@ export default {
   input: `src/index.js`,
   output: [
     {
-      file: 'lib/index.js',
+      file: 'dist/index.js',
       format: 'cjs',
       sourcemap: true,
     },
     {
-      file: 'lib/index.mjs',
+      file: 'dist/index.mjs',
       format: 'esm',
       sourcemap: true,
     },
