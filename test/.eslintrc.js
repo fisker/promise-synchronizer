@@ -10,7 +10,7 @@
 module.exports = {
   root: true,
   parserOptions: {},
-  extends: ['@fisker', '@fisker/ava'],
+  extends: ['@fisker', '@fisker/mocha'],
   settings: {},
   rules: {},
   plugins: [],
