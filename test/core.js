@@ -1,56 +1,65 @@
-import test from 'ava'
+import {expect} from 'chai'
 import sync from '../src'
 
-const rejectError = new TypeError('rejected')
+const rejectError = new Error('rejected')
+const resolveValue = 'resolved'
+const getRejectPromise = () => Promise.reject(rejectError)
+const getResolvePromise = value => Promise.resolve(value || resolveValue)
 
-test('resolved', t => {
-  t.is(sync(Promise.resolve('resolved')), 'resolved')
-})
+describe('main', function() {
+  it('should work with promise resolves with value', function() {
+    expect(sync(getResolvePromise())).equal(resolveValue)
+  })
 
-test('primitive value as well', t => {
-  t.is(sync('resolved'), 'resolved')
-})
+  it('should work with promise resolves with promise', function() {
+    expect(sync(getResolvePromise(getResolvePromise()))).equal(resolveValue)
+  })
 
-test('reject', t => {
-  t.throws(() => sync(Promise.reject(rejectError)), TypeError)
-})
+  it('should accept primitive value', function() {
+    expect(sync(resolveValue)).equal(resolveValue)
+  })
 
-test('reject in catch', t => {
-  t.throws(
-    () =>
-      sync(Promise.reject(rejectError).catch(error => Promise.reject(error))),
-    TypeError
-  )
-})
+  it('should throw on reject promise', function() {
+    expect(() => {
+      sync(getRejectPromise())
+    }).to.throw(rejectError)
+  })
 
-test('throw in catch', t => {
-  t.throws(
-    () =>
+  it('should work with reject in catch', function() {
+    const promise = getRejectPromise().catch(() => getRejectPromise())
+
+    expect(() => {
+      sync(promise)
+    }).to.throw(rejectError)
+  })
+
+  it('should work with throw in catch', function() {
+    expect(() => {
       sync(
-        Promise.reject(rejectError).catch(error => {
+        getRejectPromise().catch(error => {
           throw error
         })
-      ),
-    TypeError
-  )
-})
-
-test('try catch', t => {
-  t.notThrows(() => {
-    try {
-      sync(Promise.reject(rejectError))
-    } catch {}
+      )
+    }).to.throw(rejectError)
   })
-})
 
-test('reject not return', t => {
-  let value = 'orignal'
-  try {
-    value = sync(Promise.reject(rejectError))
-  } catch {}
-  t.is(value, 'orignal')
-})
+  it('should work with try/catch', function() {
+    expect(() => {
+      try {
+        sync(getRejectPromise())
+      } catch {}
+    }).to.not.throw()
+  })
 
-test('reject already catched', t => {
-  t.notThrows(() => sync(Promise.reject(rejectError).catch(() => {})))
+  it('rejected value should not return', function() {
+    let value = 'original'
+    try {
+      value = sync(getRejectPromise())
+    } catch {}
+    expect(value).equal('original')
+  })
+
+  it('should not throw promise already catched', function() {
+    expect(() => sync(getRejectPromise().catch(() => {}))).to.not.throw()
+  })
 })
