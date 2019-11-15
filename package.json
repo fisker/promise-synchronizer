@@ -51,7 +51,7 @@
     "@fisker/eslint-config-mocha": "1.1.6",
     "@fisker/husky-config": "1.1.3",
     "@fisker/lint-staged-config": "1.0.6",
-    "@fisker/prettier-config": "1.0.21",
+    "@fisker/prettier-config": "1.0.22",
     "chai": "4.2.0",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "6.6.0",
