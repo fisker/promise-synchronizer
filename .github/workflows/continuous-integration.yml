@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@master
         with:
-          node-version: 10.x
+          node-version: 12.x
 
       - name: Install Dependencies
         run: yarn
@@ -71,7 +71,14 @@ jobs:
       - name: Run Test
         run: yarn test-coverage
 
-      - name: Upload Coverage
+      - name: Upload Coverage Parallel
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel: true
+
+      - name: Upload Coverage Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
