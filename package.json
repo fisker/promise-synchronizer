@@ -65,7 +65,7 @@
     "require": "esm"
   },
   "dependencies": {
-    "deasync": "0.1.17",
+    "deasync": "0.1.18",
     "p-is-promise": "3.0.0"
   },
   "devDependencies": {
