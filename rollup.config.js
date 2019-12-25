@@ -1,14 +1,4 @@
-import rollupPrettier from 'rollup-plugin-prettier'
-import prettier from 'prettier'
-
-const prettierConfig = prettier.resolveConfig.sync('src/index.js')
-
-const plugins = [
-  rollupPrettier({
-    ...prettierConfig,
-    sourcemap: true,
-  }),
-]
+import prettier from 'rollup-plugin-prettier'
 
 export default {
   input: `src/index.js`,
@@ -16,13 +6,11 @@ export default {
     {
       file: 'dist/index.js',
       format: 'cjs',
-      sourcemap: true,
     },
     {
       file: 'dist/index.mjs',
       format: 'esm',
-      sourcemap: true,
     },
   ],
-  plugins,
+  plugins: [prettier()],
 }
