@@ -69,7 +69,7 @@
     "p-is-promise": "3.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.2.0",
+    "@commitlint/cli": "8.3.3",
     "@fisker/commitlint-config": "1.1.4",
     "@fisker/eslint-config": "1.6.0",
     "@fisker/eslint-config-mocha": "1.1.8",
