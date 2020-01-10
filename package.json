@@ -55,14 +55,10 @@
     "require": "esm"
   },
   "nyc": {
-    "include": [
-      "src/**"
-    ],
     "reporter": [
       "lcov",
       "text"
-    ],
-    "require": "esm"
+    ]
   },
   "dependencies": {
     "deasync": "0.1.19",
