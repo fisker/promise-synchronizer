@@ -9,10 +9,12 @@
     "synchronize",
     "synchronizer"
   ],
+  "homepage": "https://github.com/fisker/promise-synchronizer#readme",
   "bugs": {
     "url": "https://github.com/fisker/promise-synchronizer/issues"
   },
   "repository": "fisker/promise-synchronizer",
+  "funding": "https://github.com/fisker/promise-synchronizer?sponsor=1",
   "license": "MIT",
   "author": {
     "name": "fisker Cheung",
