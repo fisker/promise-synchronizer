@@ -73,7 +73,7 @@
     "@fisker/eslint-config-mocha": "1.1.10",
     "@fisker/husky-config": "1.1.9",
     "@fisker/lint-staged-config": "1.0.12",
-    "@fisker/prettier-config": "1.0.28",
+    "@fisker/prettier-config": "1.0.29",
     "chai": "4.2.0",
     "cz-conventional-changelog": "3.1.0",
     "del-cli": "3.0.0",
