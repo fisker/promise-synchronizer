@@ -12,11 +12,11 @@ function sync(promise) {
   let error
 
   promise.then(
-    value => {
+    (value) => {
       resolved = true
       result = value
     },
-    reason => {
+    (reason) => {
       rejected = true
       error = reason
     }

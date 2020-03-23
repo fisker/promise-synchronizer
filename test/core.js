@@ -4,28 +4,28 @@ import sync from '../src'
 const rejectError = new Error('rejected')
 const resolveValue = 'resolved'
 const getRejectPromise = () => Promise.reject(rejectError)
-const getResolvePromise = value => Promise.resolve(value || resolveValue)
+const getResolvePromise = (value) => Promise.resolve(value || resolveValue)
 
-describe('main', function() {
-  it('should work with promise resolves with value', function() {
+describe('main', function () {
+  it('should work with promise resolves with value', function () {
     expect(sync(getResolvePromise())).equal(resolveValue)
   })
 
-  it('should work with promise resolves with promise', function() {
+  it('should work with promise resolves with promise', function () {
     expect(sync(getResolvePromise(getResolvePromise()))).equal(resolveValue)
   })
 
-  it('should accept primitive value', function() {
+  it('should accept primitive value', function () {
     expect(sync(resolveValue)).equal(resolveValue)
   })
 
-  it('should throw on reject promise', function() {
+  it('should throw on reject promise', function () {
     expect(() => {
       sync(getRejectPromise())
     }).to.throw(rejectError)
   })
 
-  it('should work with reject in catch', function() {
+  it('should work with reject in catch', function () {
     const promise = getRejectPromise().catch(() => getRejectPromise())
 
     expect(() => {
@@ -33,17 +33,17 @@ describe('main', function() {
     }).to.throw(rejectError)
   })
 
-  it('should work with throw in catch', function() {
+  it('should work with throw in catch', function () {
     expect(() => {
       sync(
-        getRejectPromise().catch(error => {
+        getRejectPromise().catch((error) => {
           throw error
         })
       )
     }).to.throw(rejectError)
   })
 
-  it('should work with try/catch', function() {
+  it('should work with try/catch', function () {
     expect(() => {
       try {
         sync(getRejectPromise())
@@ -51,7 +51,7 @@ describe('main', function() {
     }).to.not.throw()
   })
 
-  it('rejected value should not return', function() {
+  it('rejected value should not return', function () {
     let value = 'original'
     try {
       value = sync(getRejectPromise())
@@ -59,7 +59,7 @@ describe('main', function() {
     expect(value).equal('original')
   })
 
-  it('should not throw promise already catched', function() {
+  it('should not throw promise already catched', function () {
     expect(() => sync(getRejectPromise().catch(() => {}))).to.not.throw()
   })
 })
