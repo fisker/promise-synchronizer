@@ -72,7 +72,7 @@
     "@fisker/eslint-config": "2.0.0",
     "@fisker/eslint-config-mocha": "1.1.10",
     "@fisker/husky-config": "2.0.0",
-    "@fisker/lint-staged-config": "2.0.0",
+    "@fisker/lint-staged-config": "2.1.0",
     "@fisker/prettier-config": "2.0.0",
     "chai": "4.2.0",
     "cz-conventional-changelog": "3.1.0",
