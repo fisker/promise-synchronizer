@@ -71,7 +71,7 @@
     "@fisker/commitlint-config": "1.1.7",
     "@fisker/eslint-config": "2.1.2",
     "@fisker/eslint-config-mocha": "1.1.10",
-    "@fisker/husky-config": "2.1.0",
+    "@fisker/husky-config": "2.1.1",
     "@fisker/lint-staged-config": "2.1.0",
     "@fisker/prettier-config": "2.1.1",
     "chai": "4.2.0",
