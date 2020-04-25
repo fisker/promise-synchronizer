@@ -16,9 +16,9 @@ function sync(promise) {
       resolved = true
       result = value
     },
-    (reason) => {
+    (rejectedError) => {
       rejected = true
-      error = reason
+      error = rejectedError
     }
   )
 
