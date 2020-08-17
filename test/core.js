@@ -62,4 +62,11 @@ describe('main', function () {
   it('should not throw promise already catched', function () {
     expect(() => sync(getRejectPromise().catch(() => {}))).to.not.throw()
   })
+
+  it('promise resolves with function is sync too', function () {
+    const asyncFunction = async () => 1
+    const promise = Promise.resolve(asyncFunction)
+    const resolvedValue = sync(promise)
+    expect(resolvedValue).to.equal(asyncFunction)
+  })
 })
