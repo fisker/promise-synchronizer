@@ -20,26 +20,45 @@ yarn add promise-synchronizer
 
 ## Usage
 
+### Wrap async functions
+
 ```js
 import sync from 'promise-synchronizer'
 
-const promise = new Promise((resolve, reject) => {
-  if (Math.random() > 0.5) {
-    resolve('SUCCESS')
-  } else {
-    reject(new Error('FAILURE'))
-  }
-})
+const asyncFunction = async () => 'Fulfilled'
 
-let result
+asyncFunction()
 
-try {
-  result = sync(promise) // SUCCESS
-} catch (error) {
-  console.error(error) // FAILURE
-}
+// -> Promise { 'Fulfilled' }
+
+const syncFunction = sync(asyncFunction)
+
+syncFunction()
+// -> 'Fulfilled'
 ```
 
-## License
+### Wait for promises
 
-MIT © [fisker Cheung](https://github.com/fisker)
+```js
+import sync from 'promise-synchronizer'
+
+const promiseWillFulfill = Promise.resolve('Fulfilled')
+sync(promiseWillFulfill)
+// -> Fulfilled
+
+const promiseWillReject = Promise.reject(new Error('Rejected'))
+sync(promiseWillReject)
+// -> Uncaught Error: Reject
+```
+
+Use `try-catch`
+
+```js
+import sync from 'promise-synchronizer'
+
+try {
+  console.log(sync(promise)) // Fulfilled
+} catch (error) {
+  console.error(error) // Rejected
+}
+```

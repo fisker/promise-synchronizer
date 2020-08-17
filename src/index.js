@@ -1,7 +1,17 @@
 import {loopWhile} from 'deasync'
 import isPromise from 'p-is-promise'
 
+function syncFunction(asyncFunction) {
+  return function (...functionArguments) {
+    return sync(asyncFunction(...functionArguments))
+  }
+}
+
 function sync(promise) {
+  if (typeof promise === 'function') {
+    return syncFunction(promise)
+  }
+
   if (!isPromise(promise)) {
     return promise
   }
