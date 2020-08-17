@@ -81,8 +81,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "14"
 
       - name: Install Dependencies
         run: yarn
@@ -101,8 +99,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "14"
 
       - name: Install Dependencies
         run: yarn
