@@ -3,6 +3,7 @@ import sync from '../src'
 
 describe('main', function () {
   it('should work with function', function () {
+    // eslint-disable-next-line prefer-arrow-callback
     const syncVersion = sync(function (v) {
       return Promise.resolve(v)
     })
@@ -40,16 +41,14 @@ describe('main', function () {
       })()
     }).to.throw(error)
     expect(() => {
-      sync(async (v) => {
-        return Promise.reject(error)
-      })()
+      sync(async (v) => Promise.reject(error))()
     }).to.throw(error)
   })
 
   it('should not run function return from promise', function () {
-    const fn = (v) => v
-    const promise = Promise.resolve(fn)
-    expect(sync(promise)).to.equal(fn)
+    const function_ = (v) => v
+    const promise = Promise.resolve(function_)
+    expect(sync(promise)).to.equal(function_)
     expect(sync(promise)(2)).to.equal(2)
   })
 })
