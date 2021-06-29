@@ -1,9 +1,8 @@
 import {expect} from 'chai'
-import sync from '../src'
+import sync from '../src/index.mjs'
 
 describe('main', function () {
   it('should work with function', function () {
-    // eslint-disable-next-line prefer-arrow-callback
     const syncVersion = sync(function (v) {
       return Promise.resolve(v)
     })

@@ -1,7 +1,7 @@
 import prettier from 'rollup-plugin-prettier'
 
 export default {
-  input: 'src/index.js',
+  input: 'src/index.mjs',
   output: [
     {
       file: 'dist/index.js',
