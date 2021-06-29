@@ -1,5 +1,5 @@
 import {expect} from 'chai'
-import sync from '../src'
+import sync from '../src/index.mjs'
 
 const rejectError = new Error('rejected')
 const resolveValue = 'resolved'
