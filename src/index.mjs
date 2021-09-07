@@ -29,7 +29,7 @@ function sync(promise) {
     (rejectedError) => {
       rejected = true
       error = rejectedError
-    }
+    },
   )
 
   loopWhile(() => !resolved && !rejected)

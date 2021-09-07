@@ -38,7 +38,7 @@ describe('main', function () {
       sync(
         getRejectPromise().catch((error) => {
           throw error
-        })
+        }),
       )
     }).to.throw(rejectError)
   })
