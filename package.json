@@ -83,7 +83,7 @@
     "nyc": "15.1.0",
     "prettier": "2.4.1",
     "rollup": "2.56.3",
-    "rollup-plugin-prettier": "2.1.0",
+    "rollup-plugin-prettier": "2.2.0",
     "sort-package-json": "1.51.0"
   },
   "publishConfig": {
