@@ -40,7 +40,7 @@ describe('main', function () {
       })()
     }).to.throw(error)
     expect(() => {
-      sync(async (v) => Promise.reject(error))()
+      sync((v) => Promise.reject(error))()
     }).to.throw(error)
   })
 
