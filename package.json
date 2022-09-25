@@ -60,7 +60,7 @@
     ]
   },
   "dependencies": {
-    "deasync": "0.1.24",
+    "deasync": "0.1.28",
     "p-is-promise": "4.0.0"
   },
   "devDependencies": {
