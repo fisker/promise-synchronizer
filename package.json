@@ -73,7 +73,7 @@
     "@fisker/prettier-config": "5.0.6",
     "chai": "4.3.6",
     "cz-conventional-changelog": "3.3.0",
-    "del-cli": "4.0.1",
+    "del-cli": "5.0.0",
     "eslint": "8.24.0",
     "husky": "7.0.4",
     "lint-staged": "12.1.7",
