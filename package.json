@@ -74,7 +74,7 @@
     "chai": "4.3.6",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "5.0.0",
-    "eslint": "8.24.0",
+    "eslint": "8.26.0",
     "husky": "7.0.4",
     "lint-staged": "12.5.0",
     "markdownlint-cli": "0.32.2",
