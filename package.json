@@ -84,7 +84,7 @@
     "prettier": "2.7.1",
     "rollup": "3.3.0",
     "rollup-plugin-prettier": "3.0.0",
-    "sort-package-json": "2.1.0"
+    "sort-package-json": "2.15.1"
   },
   "publishConfig": {
     "access": "public",
